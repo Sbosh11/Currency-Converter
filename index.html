@@ -1,22 +1,59 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <header>MOOLA CURRENCY CONVERTER</header>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="app.js"></script>
-    </body>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Moola-Your currency converter of choice</title>
+<meta name="description" content="Moola: Your currency converter of choice">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#b876eb" />
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+<body onload="convertCurrency()">
+<header></header>
+<div class="main-head">
+    <div class="head-text">
+        <h1>Moola</h1>
+        <p>Your currency converter of choices</p>
+    </div>
+</div>
+
+<div class="converter-box">
+    <div class="box">
+        <input type="text" id="fromAmount" onkeyup="convertCurrency();" value="1">
+    </div>
+    <div class="box">
+        <select class="currency country-dropdown" id="from" onchange="convertCurrency();">
+        <option value="USD">US Dollar(USD)</option>
+       <option value="ZAR">South African Rand(ZAR)</option>
+        </select>
+
+    </div>
+
+    <div class="box">
+        <input type="text" id="toAmount">
+    </div>
+    <div class="box">
+        <select class="currency country-dropdown" id="to" onchange="convertCurrency();">
+                        <option value="ZAR">South African Rand(ZAR)</option>
+                        <option value="USD">US Dollar(USD)</option>
+        </select></div>
+</div>
+
+<footer>
+    <p>Copyright © Sibongile 2018</p>
+</footer>
+
+<!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+<script src="js/apps.js"></script>
+</body>
+
 </html>
