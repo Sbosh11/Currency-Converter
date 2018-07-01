@@ -1,38 +1,206 @@
+.body {
+    padding:0;
+    margin: 0;
+    background: linear-gradient(to right, #f6f6f9, #f2f2f9, #f8f2ff, #f1f0f3, #e2d7ec);
+    text-align: center;
+    overflow: hidden;
+    box-sizing:border-box;
+    
+}
+
 h1, h2, h3, h4, h5, h6 {
     padding:0;
     margin:0;
 }
-.main-head , .main-box {
+.main-head , container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 600px;
-    margin:auto;
-    background-color: #1ec4ce;
+    height: 150px;
+    margin:50px auto;
+    border-radius: 10px;
+    background-color:#cf83e6;
+    background-color: rgb(63,94,251);
+    background-color: rgb(63,94,251);
+    background: radial-gradient(circle, rgb(146, 162, 247) 0%, rgba(207,131,230,0.98) 100%)
   }
 
-  .head-text , .inner-box {
+.head-text , .inner-box {
     text-align: center;
 }
 
+.head-text {
+
+    margin: 0;
+    font-size: 20px;
+    color: #4b4a50;
+    font-weight: 500;
+}
+.main-head .head-text h1 {
+
+    font-family: "Arial Black", "Arial Bold", sans-serif;
+	font-size: 64px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+    line-height: 90px;
+    color: #fff;
+    margin-bottom: -10px;
+}
+
+
+
+
+
+container {
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    width: 600px;
+    height:600px;
+    margin:auto;
+    background:#fbfbfb;
+-webkit-box-shadow: -2px -11px 57px -14px rgba(156,148,224,0.44);
+-moz-box-shadow: -2px -11px 57px -14px rgba(156,148,224,0.44);
+box-shadow: -2px -11px 57px -14px rgba(156,148,224,0.44);
+border-radius: 20px;
+}
 
 .converter-box {
     display: flex;
-    flex: 1;
-    flex-direction: row;
     flex-wrap: wrap;
     width: 600px;
     margin: auto;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
 }
   
-.box {
-width: 40%;
-margin: 10px;
+   .box {
+   width: 40%;
+   margin: 10px;
+   height: 65px;
+   border-radius: 10px;
+   background: #fff;
+   box-shadow: grey;
+   webkit-box-shadow: 0px 0px 58px -10px rgba(208,207,214,1);
+   -moz-box-shadow: 0px 0px 58px -10px rgba(208,207,214,1);
+   box-shadow: 0px 0px 58px -10px rgba(208,207,214,1);
+   border: none;
+   outline: none;
+   padding: 5px 10px;
+    
+    
+}
+
+input#fromAmount, input#toAmount {
+ height: 50px;
+}
+ input, select {
+    width: 260px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
 
 }
-.box select, .box input {
-    width: 100%;
+
+option {
+    width: 260px;
+    height: 50px;
+    border: none;
+   outline: none;
+   padding: 5px 10px;
+   border-radius: 10px;
+   outline: none;
+}
+option text {
+    padding:5px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+footer p {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 1em;
+    font-weight: 500;
+
 }
 
+
+
+@media (max-width: 699px) {
+
+
+.main-head, container {
+    width: 95%;
+    margin: auto;
+}
+
+container {
+    margin: 30px auto;
+    height: 300px;
+}
+}
+
+@media (max-width: 540px) {
+
+.head-text {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+    .converter-box {
+        width:400px;
+    }
+
+    input#fromAmount, input#toAmount {
+        height: 50px; 
+       }
+    
+        input, select {
+           width: 230px;
+           height: 40px;
+           margin: 0;
+           padding: 0;
+}
+option {
+    padding:0;
+}
+}
+
+
+@media (max-width: 450px) {
+
+    .main-head {
+        height: 120px;
+    }
+    .main-head p {
+   margin: 2px 0 4px 0 ;
+    }
+}
+@media (max-width: 350px) {
+ 
+p, html, value {
+    font-size: 12px;
+}
+    .box {
+       width: 100%;
+       
+    }
+    .main-head {
+        width: 94%;
+        height: 100px;
+    }
+
+    
+    }
+    
+    
+    
+   
