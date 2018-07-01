@@ -30,6 +30,15 @@ self.addEventListener('activate', function(event) {
     
     caches.keys().then(function (cacheNames) {
       return Promise.All(cacheNames.map(function(thisCacheName){
+        if (expectedCacheNames.indexOf(cacheName) === -1) {
+            console.log("Service Worker deleting files from ", thisCacheName);
+            return cache.delete(thisCacheName);
+          }
+      }));
+})
+    );
+});
+
           if (thisCacheName !== cacheName); {
             console.log("Service Worker deleting files from ", thisCacheName);
             return cache.delete(thisCacheName);
@@ -40,10 +49,14 @@ self.addEventListener('activate', function(event) {
 });
 
 
+self.addEventListener('message', function (event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
 
 
-
-self.addEventListener('fetch', function(event) {
+/*self.addEventListener('fetch', function(event) {
     event.respondWith(
       caches.match( event.request ).then( function( response ) {
         return response || fetch(event.request);
@@ -51,7 +64,7 @@ self.addEventListener('fetch', function(event) {
         console.log( error, 'no cache entry for:', event.request.url );
       })
     );
-  });
+  });*/
   
 
  
