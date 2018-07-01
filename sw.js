@@ -39,16 +39,7 @@ self.addEventListener('activate', function(event) {
     );
 });
 
-          if (thisCacheName !== cacheName); {
-            console.log("Service Worker deleting files from ", thisCacheName);
-            return cache.delete(thisCacheName);
-          }
-      }));
-})
-    );
-});
-
-
+        
 self.addEventListener('message', function (event) {
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
