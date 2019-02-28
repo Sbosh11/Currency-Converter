@@ -40,7 +40,7 @@ function convertCurrency() {
     }
   });
 
-  let url = 'https://free.currencyconverterapi.com/api/v5/convert?q=' + query + '&compact=ultra&apiKey=';
+  let url = 'https://free.currencyconverterapi.com/api/v5/convert?q=' + query + '&compact=ultra&apiKey=a7e5f6bef76ab935f7c3'
 
   fetch(currencyUrl).then(function (result) {
     if (result.status !== 200) {
